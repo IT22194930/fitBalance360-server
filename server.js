@@ -21,7 +21,7 @@ app.use(morgan("dev"));
 app.use("/api/v1/auth", require("./routes/userRoutes"));
 
 //port
-app.get("", (req, res) => {
+app.get('/', (req, res) => {
   res.status(200).json({
     success: true,
     message: "Welcome to FitBalance360",

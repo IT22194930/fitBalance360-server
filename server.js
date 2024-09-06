@@ -21,11 +21,9 @@ app.use(morgan("dev"));
 app.use("/api/v1/auth", require("./routes/userRoutes"));
 
 //port
-app.get('/', (req, res) => {
-  res.status(200).json({
-    success: true,
-    message: "Welcome to FitBalance360",
-  });
+app.get("/", (req, res) => {
+  res.send("FitBalance360 App Server is Running!");
+
 });
 const PORT = process.env.PORT || 8000;
 
